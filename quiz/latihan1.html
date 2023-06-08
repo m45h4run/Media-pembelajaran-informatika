@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Ilmu yang mengintegrasikan matematika terapan dan ilmu komputer disebut….?",
+			options: ["Matematika programming", "Simulasi matematika", "Teori kompulasi", "Matematika kompulasi"],
+			answer: 3
+		},
+		{
+			question: "Kajian-kajian di dalam komputasi sains masih sangat kurang karena penyebab utamanya identic dengan masih lebih condong sebagai kajian teori….?",
+			options: ["Terapan", "Semi manual", "Murni", "kontemporer"],
+			answer: 2
+		},
+		{
+			question: "Perhatikan data berikut! <br> (1) Bantuan tabel <br>(2) Kapur dan batu tulis <br>(3) Pena dan kertas <br>(4) Kalkulator mekanik <br> Berdasarkan data diata, perhitungan dan komputasi selama ribuan tahun dikerjakan dengan memanfaatkan data-data tersebut ditunjukan pada nomor….",
+			options: ["(1) dan (3)", "(1) dan (3)", "(1), (2), dan (3)", "(2), (3), dan (4)"],
+			answer: 2
+		},
+		{
+			question: "Mengapa kita perlu berfikir secara komputasional?",
+			options: ["Untuk membantu kita membuat atur cara", "Untuk membantu kita berfikir seperti komputer", "Untuk membantu kita berfikir seperti komputer", "Untuk membantu kita menyelesaikan masalah yang kompleks dengan lebih mudah"],
+			answer: 3
+		},
+		{
+			question: "Yang bukan termasuk teknik kunci pendekatan (cornerstones) berpikir komputasional adalah? ",
+			options: ["Abstraksi", "Absorbsi", "Dekomposisi", "Algoritma"],
+			answer: 1
+		},
+		{
+			question: "Landasan berpikir yang digunakan dalam belajar informatika disebut dengan ….?",
+			options: ["Berpikir komputasional", "Berpikir kritis", "Berpikir logis", "Berpikir komputerisasi"],
+			answer: 0
+		},
+		{
+			question: "Proses dan strategi yang menggunakan teknologi digital dalam kehidupan sehari-hari serta membuat masyarakat lebih melek digital disebut dengan ….?",
+			options: ["Transformasi berita", "Transformasi digital", "Transformer digital", "Transisi digital"],
+			answer: 1
+		},
+		{
+			question: "Database sekolah memiliki banyak informasi tentang siswa, pengelola data perlu menggunakan abstraksi. Data apa yang harus dia tinggalkan? ",
+			options: ["Umur", "Nomor telepon Wali murid", "Kelas", "Ukuran Baju Siswa"],
+			answer: 3
+		},
+		{
+			question: "Berikut yang termasuk proses dekomposisi adalah? ",
+			options: ["Membagi perangkat komputer ke dalam beberapa komponen", "Melihat kesamaan urutan angka-angka", "Menguraikan sifat-sifat bola", "Buat langkah-langkah untuk menyelesaikan persamaan elastisitas pantulan bola"],
+			answer: 0
+		},
+		{
+			question: "Dilakukan untuk menghilangkan informasi yang tidak penting dan fokus pada informasi yang penting dalam penyelesaian masalah merupakan pendekatan….? ",
+			options: ["Abstraksi", "Pengenalan pola", "Dekomposisi", "Algoritma"],
+			answer: 0
+		}
+
+
+		];
+
+		var kembali = '../materi/materi1.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Berikut ini merupakan definisi dari komputer, kecuali .......?",
+			options: ["Sebuah mesin hitung", "Mesin elektronik", "Menerima informasi masukan", "Mengolah informasi"],
+			answer: 1
+		},
+		{
+			question: "Komponen yang berfungsi untuk membentuk fungsi-fungsi pengolahan data komputer adalah .....?",
+			options: ["Unit Kontrol", "Satuan Aritmatika Dan Logika", "Daftar", "Interkoneksi CPU"],
+			answer: 1
+		},
+		{
+			question: "Berikut yang bukan termasuk jenis brainware adalah.....?",
+			options: ["Programer", "Proyektor", "Sistem analis", "Administrator"],
+			answer: 1
+		},
+		{
+			question: "Pernyataan yang benar mengenai organisasi komputer adalah.?",
+			options: ["Berkaitan erat dengan seorang programer", "Berkaitan erat dengan unit-unit operasional", "Berkaitan erat dengan set instruksi", "Berkaitan erat dengan aritmatika yang digunakan"],
+			answer: 1
+		},
+		{
+			question: "Empat komponen utama Sistem Operasi adalah, kecuali .......? ",
+			options: ["Unit Aritmatika dan Logis (ALU)", "Satuan Kontrol", "Alat masukan dan hasil (Secara kolektif dinamakan I/O)", "Semua jawaban benar"],
+			answer: 3
+		},
+		{
+			question: "Perangkat yang terdapat dalam sistem komputer diantaranya adalah......….? ",
+			options: ["Hardware, program dan CPU", "Software, Brainware dan Linux", "User, program dan perangkat lunak", "Hardware, software dan brainware"],
+			answer: 3
+		},
+		{
+			question: "Hardware yang berfungsi sebagai alat penunjuk untuk mengatur posisi kursor di layar adalah….?",
+			options: ["Memantau", "Pencetak", "Mouse", "Pembicara"],
+			answer: 2
+		},
+		{
+			question: "Manusia dengan tenaga dan ilmu pengetahuan yang digunakan untuk mengoperasikan serta mengatur sistem komputer adalah ..…? ",
+			options: ["Brainware", "Perangkat surat", "Perangkat keras", "Perangkat Lunak"],
+			answer: 0
+		},
+		{
+			question: "Sistem komputer terdiri dari 3 (tiga) unsur berikut, kecuali .......? ",
+			options: ["Brainware", "Perangkat surat", "Perangkat keras", "Perangkat Lunak"],
+			answer: 3
+		},
+		{
+			question: "Perangkat yang terdapat dalam sistem komputer diantaranya adalah...….? ",
+			options: ["Hardware, program dan CPU", "Software, Brainware dan Linux", "User, program dan perangkat lunak", "Hardware, software dan brainware"],
+			answer: 3
+		}
+
+
+		];
+
+		var kembali = '../materi/materi3.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

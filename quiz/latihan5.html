@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Teknik analisis analisis data dalam penelitian penelitian ada 2 “dua” jenis yang diantaranya adalah......?",
+			options: ["Kualitatif dan Diskriminatif", "Kuantitatif dan Kondisional", "Kualitatif dan Kuantitatif", "Kualitatif dan Deskriptif"],
+			answer: 2
+		},
+		{
+			question: "Terpeliharanya keselarasan data dapat terjadi jika perubahan data pada aplikasi yang berbeda makna secara otomatis data jika ditinjau dari segi….…..?",
+			options: ["Consistent", "Shared", "Standardization", "Acuracy"],
+			answer: 0
+		},
+		{
+			question: "Langkah dan prosedur analisis data adalah sbg berikut.. kecuali...?",
+			options: ["Editing", "Koding", "Pengujian", "Pemusatan"],
+			answer: 3
+		},
+		{
+			question: "Yang tidak termasuk beberapa keuntungan melakukan analisis data bagi sebuah penelitian adalah....?",
+			options: ["Proses identifikasi lebih reliable", "Mendapatkan hasil pengukuran yang lebih jelas", "Data dapat dimanipulasi untuk keuntungan materi", "Memungkinkan untuk melakukan identifikasi pada hal-hal yang penting"],
+			answer: 2
+		},
+		{
+			question: "Analisis data adalah proses mengatur data, mengorganisasikannya kedalam suatu pola, kategori, dan satuan uraian dasar. dikemukakan oleh...........? ",
+			options: ["Patton (1980)", "Lexy J. Moleong (2000)", "Jhon Dalton (1975)", "Bogdan dan Taylor (1975)"],
+			answer: 0
+		},
+		{
+			question: "Teknik analisis data secara deskriptif yaitu dalam bentuk... kecuali....….? ",
+			options: ["Grafik", "Power point", "Tabel", "Diagram"],
+			answer: 1
+		},
+		{
+			question: "Proses pengujian kualitas data, baik dari sisi validitas dan reliabilitas instrumen dari pengumpulan data adalah pengertian dari tahap.......?",
+			options: ["Pengujian", "Pengumpulan data", "Editing", "Gatau"],
+			answer: 0
+		},
+		{
+			question: "Upaya atau cara untuk mengolah mengolah data menjadi menjadi informasi informasi sehingga sehingga karakteristik data tersebut tersebut bisa dipaham dipahami dan bermanfaat bermanfaat untuk solusi permasalahan, alahan, terutama terutama masalah masalah yang berkaitan berkaitan dengan penelitian. adalah pengertian dari........…? ",
+			options: ["Analisis Informasi", "Data", "Analisis Media", "Analisis Data"],
+			answer: 3
+		},
+		{
+			question: "Teknik analisis yang digunakan dalam menganalisis data dengan membuat gambaran data-data yang terkumpul tanpa membuat generalisasi dari hasil penelitian tersebut. adalah analisis data bersifat.........? ",
+			options: ["Deskriptif", "Kuantitatif", "Kualitatif", "Diskriminatif"],
+			answer: 0
+		},
+		{
+			question: "Langkah dan Prosedur Analisis data dibawah ini yang benar adalah... <br> 1. Tahap pengumpulan data <br> 2. Tahap pengujian <br> 3. Tahap tabulasi <br> 4. Tahap coding <br> 5. Tahap mendeskripsikan mendeskripsikan data <br> 6. Tahap pengujian hipotesis......….?",
+			options: ["1,4,3,2,5,6", "1,5,3,6,4,2", "2,4,3,1,5,6", "1,4,5,2,3,6"],
+			answer: 0
+		}
+
+
+		];
+
+		var kembali = '../materi/materi5.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

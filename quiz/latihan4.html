@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Perangkat keras (hardware) yang dibutuhkan untuk membangun sebuah jaringan, kecuali..........?",
+			options: ["Router", "Hub", "Switch", "Gerbang"],
+			answer: 3
+		},
+		{
+			question: "Apa yang dimaksud dengan Alamat IP…..?",
+			options: ["IP Address adalah gambaran / rangkain jaringan", "IP Address adalah alamat dari server", "Alamat IP adalah jaringan LAN nirkabel", "IP Address adalah alamat/alamat global yang menggunakan protokol TCP/IP"],
+			answer: 3
+		},
+		{
+			question: "Topologi jaringan komputer yang sangat mudah digunakan adalah topologi........?",
+			options: ["Bus", "Pohon", "Ring", "Bintang"],
+			answer: 3
+		},
+		{
+			question: "Apa urutan warna ketiga di kedua sisi pada pengkabelan secara Cross–Over....?",
+			options: ["Biru – biru", "Putih Orange – Putih Hijau", "Hijau – Orange", "Cokelat – Coklat"],
+			answer: 1
+		},
+		{
+			question: "Dibawah ini yang termasuk kabel berjenis twisted pair, adalah..........?",
+			options: ["TCP/IPb", "UTPc", "Koaksial", "STP & UTP"],
+			answer: 3
+		},
+		{
+			question: "Komponen jaringan komputer yang berfungsi memperkuat sinyal dengan cara menerima sinyal dan suatu segmen kabel lalu memancarkan kembali sinyal tsb dengan kekuatan yang sama dengan sinyal aslinya pada kabel segmen lain adalah.......….? ",
+			options: ["Bridge", "Router", "pengulang", "Mengalihkan"],
+			answer: 2
+		},
+		{
+			question: "Agar 3 atau lebih komputer bisa membentuk suatu jaringan, maka diperlukan....?",
+			options: ["Kartu VGAb", "Modemc", "Repeaterd", "Pusat"],
+			answer: 3
+		},
+		{
+			question: "Perangkat jaringan yang paling sederhana cara kerjanya adalah.....…? ",
+			options: ["Routerb", "Beralih", "Titik Akses", "Pusat"],
+			answer: 3
+		},
+		{
+			question: "Pada jaringan komputer , unit komputer yang terhubung merupakan gabungan terdiri dari beberapa workstation atau juga gabungan beberapa komputer......?",
+			options: ["Jaringan komputer", "Sistem terdistribusi", "Tuan rumah", "Server dan klien"],
+			answer: 3
+		},
+		{
+			question: "Suatu model jaringan dimana komputer yang terhubung terdiri dari host (komputer utama) dan terminal (komputer yang terhubung dengan kopmuter host) dinamakan......….? ",
+			options: ["Jaringan komputer", "Sistem terdistribusi", "Tuan rumah", "Stasiun kerja"],
+			answer: 1
+		}
+
+
+		];
+
+		var kembali = '../materi/materi4.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

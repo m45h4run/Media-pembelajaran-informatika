@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Program yang digunakan untuk pengelolah kata pada Microsoft Windows bernama...?",
+			options: ["Microsoft Excel", "Microsoft Word", "Microsoft Powerpoint", "One Drive"],
+			answer: 1
+		},
+		{
+			question: "Berikut ini yang tidak terdapat icon pada Office Button adalah....?",
+			options: ["New", "Save", "Print", "Copy"],
+			answer: 3
+		},
+		{
+			question: "Jika ingin memberi cetak tebal pada sebuah text kita perlu menekan icon...?",
+			options: ["Bold", "Italic", "Garis", "Underline"],
+			answer: 0
+		},
+		{
+			question: "Perintah copy atau salin dapat dilakukan dengan kombinasi tombol pada keyboard dengan menekan...?",
+			options: ["Ctrl + O", "Ctrl + X", "Ctrl + V", "Ctrl + C"],
+			answer: 3
+		},
+		{
+			question: "Jika kita sudah melakukan copy dan ingin paste, kita bisa melakukan paste dengan menekan tombol pada keyboard...? ",
+			options: ["Ctrl + O", "Ctrl + X", "Ctrl + V", "Ctrl + C"],
+			answer: 2
+		},
+		{
+			question: "File yang tersimpan pada Microsoft Office Word versi 2007 berekstensi...….? ",
+			options: ["Pdf", "Mp4", "Docx", "Ppt"],
+			answer: 2
+		},
+		{
+			question: "Untuk membuat dokumen dengan orientasi kertas horisontal, kita bisa menggunakan ….?",
+			options: ["Landscape", "Portraits", "Vertical", "Horizontally"],
+			answer: 3
+		},
+		{
+			question: "Kombinasi tombol pada keyboard yang digunakan untuk membatalkan printah adalah…? ",
+			options: ["Ctrl + C", "Ctrl + A", "Ctrl + U", "Ctrl + Z"],
+			answer: 3
+		},
+		{
+			question: "Jika kita ingin mengetik rumus matematika dapat menggunakan icon...? ",
+			options: ["Symbol", "Icon", "Table", "Aquation"],
+			answer: 3
+		},
+		{
+			question: "Icon text box biasa digunakan untuk...….? ",
+			options: ["Membuat teks atau tulisan di dalam sebuah kotak", "Membuat teks atau tulisan di sekitar kotak", "Membuat teks atau tulisan melingkari kotak", "Membuat teks atau tulisan di belakang kotak"],
+			answer: 1
+		}
+
+
+		];
+
+		var kembali = '../materi/materi2.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+		
+:root {
+	scroll-behavior: smooth;
+	--hue: 10;
+	--sat: 97%;
+	--lig: 59%;
+	--primary: #1bbd36;
+	--color01: #2c2c2c;
+	--color02: #808080;
+	--bg01: #fafdff;
+	--bg02: rgba(0, 0, 0, 0.22);
+}
+
+
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20;
+}
+
+.project__title{
+	margin-top: 3rem;
+	display: flex;
+	font-size: 1.3rem;
+	text-align: center;
+	margin-bottom: 3.5rem;
+	justify-content: center;
+	position: relative;
+}
+
+.project__title::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	right: 0;
+	height: 8px;
+	width: 120px;
+	margin: 0 auto;
+	width: 128px;
+	background: var(--primary);
+	height: 4px;
+	border-radius: 0px 0px 10px 10px
+}
+
+.project__title::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	right: 0;
+	height: 8px;
+	width: 120px;
+	margin: 0 auto;
+	width: 28px;
+	background: var(--primary);
+	height: 5px;
+	border-radius: 0px 0px 10px 10px
+}
+
+
+
+.container {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.question-container {
+	margin-bottom: 20px;
+}
+
+.question {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.options {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.feedback {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#submit {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 0.5rem;
+	background-color: var(--primary);
+	color: #FFF !important;
+	border-radius: 1rem;
+	transition: .3s;
+	justify-content: center;
+	height: 30px;
+	font-weight: 500;
+}
+
+#submit:hover {
+	background-color: #0062cc;
+}
+
+#btn{
+	display: inline-flex;
+	align-items: center;
+	column-gap: 0.5rem;
+	background-color: var(--primary);
+	color: #FFF !important;
+	border-radius: 1rem;
+	transition: .3s;
+	justify-content: center;
+	width: 180px;
+	height: 30px;
+	font-weight: 500;
+}
+#btn:hiver {
+	background-color: #0062cc;
+}

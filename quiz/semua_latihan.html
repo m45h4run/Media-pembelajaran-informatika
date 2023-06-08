@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<a href="../materi.html" id="btn"> Batal</a>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+			<p><code>70 Soal</code></p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Ilmu yang mengintegrasikan matematika terapan dan ilmu komputer disebut….?",
+			options: ["Matematika programming", "Simulasi matematika", "Teori kompulasi", "Matematika kompulasi"],
+			answer: 3
+		},
+		{
+			question: "Kajian-kajian di dalam komputasi sains masih sangat kurang karena penyebab utamanya identic dengan masih lebih condong sebagai kajian teori….?",
+			options: ["Terapan", "Semi manual", "Murni", "kontemporer"],
+			answer: 2
+		},
+		{
+			question: "Perhatikan data berikut! <br> (1) Bantuan tabel <br>(2) Kapur dan batu tulis <br>(3) Pena dan kertas <br>(4) Kalkulator mekanik <br> Berdasarkan data diata, perhitungan dan komputasi selama ribuan tahun dikerjakan dengan memanfaatkan data-data tersebut ditunjukan pada nomor….",
+			options: ["(1) dan (3)", "(1) dan (3)", "(1), (2), dan (3)", "(2), (3), dan (4)"],
+			answer: 2
+		},
+		{
+			question: "Mengapa kita perlu berfikir secara komputasional?",
+			options: ["Untuk membantu kita membuat atur cara", "Untuk membantu kita berfikir seperti komputer", "Untuk membantu kita berfikir seperti komputer", "Untuk membantu kita menyelesaikan masalah yang kompleks dengan lebih mudah"],
+			answer: 3
+		},
+		{
+			question: "Yang bukan termasuk teknik kunci pendekatan (cornerstones) berpikir komputasional adalah? ",
+			options: ["Abstraksi", "Absorbsi", "Dekomposisi", "Algoritma"],
+			answer: 1
+		},
+		{
+			question: "Landasan berpikir yang digunakan dalam belajar informatika disebut dengan ….?",
+			options: ["Berpikir komputasional", "Berpikir kritis", "Berpikir logis", "Berpikir komputerisasi"],
+			answer: 0
+		},
+		{
+			question: "Proses dan strategi yang menggunakan teknologi digital dalam kehidupan sehari-hari serta membuat masyarakat lebih melek digital disebut dengan ….?",
+			options: ["Transformasi berita", "Transformasi digital", "Transformer digital", "Transisi digital"],
+			answer: 1
+		},
+		{
+			question: "Database sekolah memiliki banyak informasi tentang siswa, pengelola data perlu menggunakan abstraksi. Data apa yang harus dia tinggalkan? ",
+			options: ["Umur", "Nomor telepon Wali murid", "Kelas", "Ukuran Baju Siswa"],
+			answer: 3
+		},
+		{
+			question: "Berikut yang termasuk proses dekomposisi adalah? ",
+			options: ["Membagi perangkat komputer ke dalam beberapa komponen", "Melihat kesamaan urutan angka-angka", "Menguraikan sifat-sifat bola", "Buat langkah-langkah untuk menyelesaikan persamaan elastisitas pantulan bola"],
+			answer: 0
+		},
+		{
+			question: "Dilakukan untuk menghilangkan informasi yang tidak penting dan fokus pada informasi yang penting dalam penyelesaian masalah merupakan pendekatan….? ",
+			options: ["Abstraksi", "Pengenalan pola", "Dekomposisi", "Algoritma"],
+			answer: 0
+		},
+
+
+
+
+
+
+		{
+			question: "Program yang digunakan untuk pengelolah kata pada Microsoft Windows bernama...?",
+			options: ["Microsoft Excel", "Microsoft Word", "Microsoft Powerpoint", "One Drive"],
+			answer: 1
+		},
+		{
+			question: "Berikut ini yang tidak terdapat icon pada Office Button adalah....?",
+			options: ["New", "Save", "Print", "Copy"],
+			answer: 3
+		},
+		{
+			question: "Jika ingin memberi cetak tebal pada sebuah text kita perlu menekan icon...?",
+			options: ["Bold", "Italic", "Garis", "Underline"],
+			answer: 0
+		},
+		{
+			question: "Perintah copy atau salin dapat dilakukan dengan kombinasi tombol pada keyboard dengan menekan...?",
+			options: ["Ctrl + O", "Ctrl + X", "Ctrl + V", "Ctrl + C"],
+			answer: 3
+		},
+		{
+			question: "Jika kita sudah melakukan copy dan ingin paste, kita bisa melakukan paste dengan menekan tombol pada keyboard...? ",
+			options: ["Ctrl + O", "Ctrl + X", "Ctrl + V", "Ctrl + C"],
+			answer: 2
+		},
+		{
+			question: "File yang tersimpan pada Microsoft Office Word versi 2007 berekstensi...….? ",
+			options: ["Pdf", "Mp4", "Docx", "Ppt"],
+			answer: 2
+		},
+		{
+			question: "Untuk membuat dokumen dengan orientasi kertas horisontal, kita bisa menggunakan ….?",
+			options: ["Landscape", "Portraits", "Vertical", "Horizontally"],
+			answer: 3
+		},
+		{
+			question: "Kombinasi tombol pada keyboard yang digunakan untuk membatalkan printah adalah…? ",
+			options: ["Ctrl + C", "Ctrl + A", "Ctrl + U", "Ctrl + Z"],
+			answer: 3
+		},
+		{
+			question: "Jika kita ingin mengetik rumus matematika dapat menggunakan icon...? ",
+			options: ["Symbol", "Icon", "Table", "Aquation"],
+			answer: 3
+		},
+		{
+			question: "Icon text box biasa digunakan untuk...….? ",
+			options: ["Membuat teks atau tulisan di dalam sebuah kotak", "Membuat teks atau tulisan di sekitar kotak", "Membuat teks atau tulisan melingkari kotak", "Membuat teks atau tulisan di belakang kotak"],
+			answer: 1
+		},
+
+
+
+
+
+
+		{
+			question: "Berikut ini merupakan definisi dari komputer, kecuali .......?",
+			options: ["Sebuah mesin hitung", "Mesin elektronik", "Menerima informasi masukan", "Mengolah informasi"],
+			answer: 1
+		},
+		{
+			question: "Komponen yang berfungsi untuk membentuk fungsi-fungsi pengolahan data komputer adalah .....?",
+			options: ["Unit Kontrol", "Satuan Aritmatika Dan Logika", "Daftar", "Interkoneksi CPU"],
+			answer: 1
+		},
+		{
+			question: "Berikut yang bukan termasuk jenis brainware adalah.....?",
+			options: ["Programer", "Proyektor", "Sistem analis", "Administrator"],
+			answer: 1
+		},
+		{
+			question: "Pernyataan yang benar mengenai organisasi komputer adalah.?",
+			options: ["Berkaitan erat dengan seorang programer", "Berkaitan erat dengan unit-unit operasional", "Berkaitan erat dengan set instruksi", "Berkaitan erat dengan aritmatika yang digunakan"],
+			answer: 1
+		},
+		{
+			question: "Empat komponen utama Sistem Operasi adalah, kecuali .......? ",
+			options: ["Unit Aritmatika dan Logis (ALU)", "Satuan Kontrol", "Alat masukan dan hasil (Secara kolektif dinamakan I/O)", "Semua jawaban benar"],
+			answer: 3
+		},
+		{
+			question: "Perangkat yang terdapat dalam sistem komputer diantaranya adalah......….? ",
+			options: ["Hardware, program dan CPU", "Software, Brainware dan Linux", "User, program dan perangkat lunak", "Hardware, software dan brainware"],
+			answer: 3
+		},
+		{
+			question: "Hardware yang berfungsi sebagai alat penunjuk untuk mengatur posisi kursor di layar adalah….?",
+			options: ["Memantau", "Pencetak", "Mouse", "Pembicara"],
+			answer: 2
+		},
+		{
+			question: "Manusia dengan tenaga dan ilmu pengetahuan yang digunakan untuk mengoperasikan serta mengatur sistem komputer adalah ..…? ",
+			options: ["Brainware", "Perangkat surat", "Perangkat keras", "Perangkat Lunak"],
+			answer: 0
+		},
+		{
+			question: "Sistem komputer terdiri dari 3 (tiga) unsur berikut, kecuali .......? ",
+			options: ["Brainware", "Perangkat surat", "Perangkat keras", "Perangkat Lunak"],
+			answer: 3
+		},
+		{
+			question: "Perangkat yang terdapat dalam sistem komputer diantaranya adalah...….? ",
+			options: ["Hardware, program dan CPU", "Software, Brainware dan Linux", "User, program dan perangkat lunak", "Hardware, software dan brainware"],
+			answer: 3
+		},
+
+
+
+
+
+
+		{
+			question: "Perangkat keras (hardware) yang dibutuhkan untuk membangun sebuah jaringan, kecuali..........?",
+			options: ["Router", "Hub", "Switch", "Gerbang"],
+			answer: 3
+		},
+		{
+			question: "Apa yang dimaksud dengan Alamat IP…..?",
+			options: ["IP Address adalah gambaran / rangkain jaringan", "IP Address adalah alamat dari server", "Alamat IP adalah jaringan LAN nirkabel", "IP Address adalah alamat/alamat global yang menggunakan protokol TCP/IP"],
+			answer: 3
+		},
+		{
+			question: "Topologi jaringan komputer yang sangat mudah digunakan adalah topologi........?",
+			options: ["Bus", "Pohon", "Ring", "Bintang"],
+			answer: 3
+		},
+		{
+			question: "Apa urutan warna ketiga di kedua sisi pada pengkabelan secara Cross–Over....?",
+			options: ["Biru – biru", "Putih Orange – Putih Hijau", "Hijau – Orange", "Cokelat – Coklat"],
+			answer: 1
+		},
+		{
+			question: "Dibawah ini yang termasuk kabel berjenis twisted pair, adalah..........?",
+			options: ["TCP/IPb", "UTPc", "Koaksial", "STP & UTP"],
+			answer: 3
+		},
+		{
+			question: "Komponen jaringan komputer yang berfungsi memperkuat sinyal dengan cara menerima sinyal dan suatu segmen kabel lalu memancarkan kembali sinyal tsb dengan kekuatan yang sama dengan sinyal aslinya pada kabel segmen lain adalah.......….? ",
+			options: ["Bridge", "Router", "pengulang", "Mengalihkan"],
+			answer: 2
+		},
+		{
+			question: "Agar 3 atau lebih komputer bisa membentuk suatu jaringan, maka diperlukan....?",
+			options: ["Kartu VGAb", "Modemc", "Repeaterd", "Pusat"],
+			answer: 3
+		},
+		{
+			question: "Perangkat jaringan yang paling sederhana cara kerjanya adalah.....…? ",
+			options: ["Routerb", "Beralih", "Titik Akses", "Pusat"],
+			answer: 3
+		},
+		{
+			question: "Pada jaringan komputer , unit komputer yang terhubung merupakan gabungan terdiri dari beberapa workstation atau juga gabungan beberapa komputer......?",
+			options: ["Jaringan komputer", "Sistem terdistribusi", "Tuan rumah", "Server dan klien"],
+			answer: 3
+		},
+		{
+			question: "Suatu model jaringan dimana komputer yang terhubung terdiri dari host (komputer utama) dan terminal (komputer yang terhubung dengan kopmuter host) dinamakan......….? ",
+			options: ["Jaringan komputer", "Sistem terdistribusi", "Tuan rumah", "Stasiun kerja"],
+			answer: 1
+		},
+
+
+
+
+		{
+			question: "Teknik analisis analisis data dalam penelitian penelitian ada 2 “dua” jenis yang diantaranya adalah......?",
+			options: ["Kualitatif dan Diskriminatif", "Kuantitatif dan Kondisional", "Kualitatif dan Kuantitatif", "Kualitatif dan Deskriptif"],
+			answer: 2
+		},
+		{
+			question: "Terpeliharanya keselarasan data dapat terjadi jika perubahan data pada aplikasi yang berbeda makna secara otomatis data jika ditinjau dari segi….…..?",
+			options: ["Consistent", "Shared", "Standardization", "Acuracy"],
+			answer: 0
+		},
+		{
+			question: "Langkah dan prosedur analisis data adalah sbg berikut.. kecuali...?",
+			options: ["Editing", "Koding", "Pengujian", "Pemusatan"],
+			answer: 3
+		},
+		{
+			question: "Yang tidak termasuk beberapa keuntungan melakukan analisis data bagi sebuah penelitian adalah....?",
+			options: ["Proses identifikasi lebih reliable", "Mendapatkan hasil pengukuran yang lebih jelas", "Data dapat dimanipulasi untuk keuntungan materi", "Memungkinkan untuk melakukan identifikasi pada hal-hal yang penting"],
+			answer: 2
+		},
+		{
+			question: "Analisis data adalah proses mengatur data, mengorganisasikannya kedalam suatu pola, kategori, dan satuan uraian dasar. dikemukakan oleh...........? ",
+			options: ["Patton (1980)", "Lexy J. Moleong (2000)", "Jhon Dalton (1975)", "Bogdan dan Taylor (1975)"],
+			answer: 0
+		},
+		{
+			question: "Teknik analisis data secara deskriptif yaitu dalam bentuk... kecuali....….? ",
+			options: ["Grafik", "Power point", "Tabel", "Diagram"],
+			answer: 1
+		},
+		{
+			question: "Proses pengujian kualitas data, baik dari sisi validitas dan reliabilitas instrumen dari pengumpulan data adalah pengertian dari tahap.......?",
+			options: ["Pengujian", "Pengumpulan data", "Editing", "Gatau"],
+			answer: 0
+		},
+		{
+			question: "Upaya atau cara untuk mengolah mengolah data menjadi menjadi informasi informasi sehingga sehingga karakteristik data tersebut tersebut bisa dipaham dipahami dan bermanfaat bermanfaat untuk solusi permasalahan, alahan, terutama terutama masalah masalah yang berkaitan berkaitan dengan penelitian. adalah pengertian dari........…? ",
+			options: ["Analisis Informasi", "Data", "Analisis Media", "Analisis Data"],
+			answer: 3
+		},
+		{
+			question: "Teknik analisis yang digunakan dalam menganalisis data dengan membuat gambaran data-data yang terkumpul tanpa membuat generalisasi dari hasil penelitian tersebut. adalah analisis data bersifat.........? ",
+			options: ["Deskriptif", "Kuantitatif", "Kualitatif", "Diskriminatif"],
+			answer: 0
+		},
+		{
+			question: "Langkah dan Prosedur Analisis data dibawah ini yang benar adalah... <br> 1. Tahap pengumpulan data <br> 2. Tahap pengujian <br> 3. Tahap tabulasi <br> 4. Tahap coding <br> 5. Tahap mendeskripsikan mendeskripsikan data <br> 6. Tahap pengujian hipotesis......….?",
+			options: ["1,4,3,2,5,6", "1,5,3,6,4,2", "2,4,3,1,5,6", "1,4,5,2,3,6"],
+			answer: 0
+		},
+
+
+
+
+
+		{
+			question: "Ilmu dasar yang dapat dijadikan jembatan untuk membuat komunikasi antara mesin dengan manusia…….?",
+			options: ["Penglihatan", "Robot", "NLP", "ES"],
+			answer: 2
+		},
+		{
+			question: "Sebuah sistem informasi yang memiliki intelegensia buatan (Artificial Intelegent) yang menyerupai intelegensia manusia disebut…..?",
+			options: ["Sistem Pendukung Keputusan", "Extra Sensory Project", "Program ELIZA", "Sistem Pakar"],
+			answer: 3
+		},
+		{
+			question: "Artificial Neural Network mencoba mensimulasikan proses-proses sel-sel otak yang saling berhubungan dan dibangun dari...?",
+			options: ["Rangkaian kode", "Membandingkan keluaran dari jaringan saraf", "Fitur pemfilteran email otomatis", "Meniru fungsi kognisi manusia"],
+			answer: 0
+		},
+		{
+			question: "Sebagai kelanjutan dari perkembangan AI, Bertrand Russell, dan Alfred North Whitehead menertibkan sebuah buku yang berjudul…..?",
+			options: ["Principia Bertrand Utara", "Principia Descartes", "Principia Intelegensia", "Principia Matematika"],
+			answer: 3
+		},
+		{
+			question: "Fungsi yang dibuat oleh programmer itu sendiri adalah......?",
+			options: ["Parameter fungsi", "Fungsi yang Ditentukan Programmer", "Fungsi prototipe", "Fungsi Pustaka Standar"],
+			answer: 1
+		},
+		{
+			question: "Bahasa pemrograman pertama yang diasosiasikan dengan AI adalah....….? ",
+			options: ["C++", "Rekursif", "OOP", "LISP"],
+			answer: 3
+		},
+		{
+			question: "Joel Moses mendemonstrasikan kekuatan pertimbangan simbolis untuk mengintegrasikan masalah di dalam program Macsyma, program berbasis pengetahuan yang sukses pertama kali dalam bidang.......?",
+			options: ["Bioinformatika", "Farmatika", "Matematika", "Robotika"],
+			answer: 2
+		},
+		{
+			question: "Berikut konsep dasar intelligensi buatan, kecuali.....…? ",
+			options: ["Pembelajaran mendalam", "Pembelajaran mesin", "Jaringan saraf", "Mendekripsi program"],
+			answer: 3
+		},
+		{
+			question: "Teknik pencarian yang diterapkan hanya pada elemen array yang telah terurut adalah.....? ",
+			options: ["Pencarian informasi", "Pencarian metode", "Pencarian berurutan", "Pencarian biner"],
+			answer: 3
+		},
+		{
+			question: "Variabel yang terdapat pada daftar parameter di dalam definisi fungsi disebut parameter...….? ",
+			options: ["Aktual", "Fungsi", "Perpustakaan", "Formal"],
+			answer: 3
+		},
+
+
+
+
+
+		{
+			question: "Perhatikan data berikut! <br> (1) Mendorong pengembangan program komputer secara bersama-sama <br> (2) Membuang program yang salah (bug) <br> (3) Mengenalkan karya turunan <br> (4) Mendistribusikan lisensi terbatas  <br> Berdasarkan pernyataan komersial di atas, gerakan open source Disusun dengan tujuan ditunjukan pada nomor…..?",
+			options: ["(1) dan (3)", "(2) dan (4)", "(1), (2), dan (3)", "(2), (3) dan (4)"],
+			answer: 2
+		},
+		{
+			question: "Padanan aplikasi 3D Studio Max yang tepat adalah….…..?",
+			options: ["Blender", "Freeware XaraLX", "Krita", "Mypaint"],
+			answer: 0
+		},
+		{
+			question: "Cara menyewakan perangkat lunak commercial proprietary termasuk tindakan…....?",
+			options: ["Biasa Saja", "Bukan Masalah", "Diperbolehkan", "Ilegal"],
+			answer: 3
+		},
+		{
+			question: "Program yang paling populer yang berusaha untuk mengembangkan sistem operasi yang selama ini didominasi oleh Microsoft adalah…..?",
+			options: ["OS Android", "Citrix OS", "Linux OS", "Palm OS"],
+			answer: 2
+		},
+		{
+			question: "Pengesahan WTO (The World Trade Organization) telah diatur menurut undang-undang......?",
+			options: ["No. 14 Tahun 1998", "No 2 Tahun 1992", "No 27 Tahun 2012", "No 7 Tahun 1994"],
+			answer: 3
+		},
+		{
+			question: "Perangkat lunak yang dilepas seluruhnya oleh pembuatnya disebut...….? ",
+			options: ["Program percobaan", "Shareware", "Publik nomor satu", "Domain publik"],
+			answer: 3
+		},
+		{
+			question: "Seseorang tidak lagi terikat dengan syarat-syarat dalam kontak jika melakukan…..?",
+			options: ["Membuangnya begitu saja", "Mengembalikan produk tersebut", "Menjual kembali produk tersebut", "Menumpuknya di rak buku"],
+			answer: 1
+		},
+		{
+			question: "Model lisensi yang telah dikembangkan sebagai usaha kerja sama dikenal dengan nama...? ",
+			options: ["Creative common ( kreatif bersama )", "Perjanjian lisensi pengguna akhir", "Sistem peralatan gratis", "Properti industri"],
+			answer: 0
+		},
+		{
+			question: "Industri yang berbasis pada HKI berhubungan dengan kemampuan dalam ruang lingkup....?",
+			options: ["Marginal", "Sumber Daya Alam", "Semua benar", "Sumber Daya Manusia"],
+			answer: 3
+		},
+		{
+			question: "Pasal 72 (4) pada UU 19 Tahun 2002 Berkaitan dengan faktor berikut, kecuali…..?",
+			options: ["Bidang Agama", "Inventarisasi Usaha legal", "Kesusilaan", "Ketertiban Umum"],
+			answer: 1
+		}
+
+
+		];
+
+		var kembali = '../materi.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>

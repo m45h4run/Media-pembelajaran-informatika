@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Perhatikan data berikut! <br> (1) Mendorong pengembangan program komputer secara bersama-sama <br> (2) Membuang program yang salah (bug) <br> (3) Mengenalkan karya turunan <br> (4) Mendistribusikan lisensi terbatas  <br> Berdasarkan pernyataan komersial di atas, gerakan open source Disusun dengan tujuan ditunjukan pada nomor…..?",
+			options: ["(1) dan (3)", "(2) dan (4)", "(1), (2), dan (3)", "(2), (3) dan (4)"],
+			answer: 2
+		},
+		{
+			question: "Padanan aplikasi 3D Studio Max yang tepat adalah….…..?",
+			options: ["Blender", "Freeware XaraLX", "Krita", "Mypaint"],
+			answer: 0
+		},
+		{
+			question: "Cara menyewakan perangkat lunak commercial proprietary termasuk tindakan…....?",
+			options: ["Biasa Saja", "Bukan Masalah", "Diperbolehkan", "Ilegal"],
+			answer: 3
+		},
+		{
+			question: "Program yang paling populer yang berusaha untuk mengembangkan sistem operasi yang selama ini didominasi oleh Microsoft adalah…..?",
+			options: ["OS Android", "Citrix OS", "Linux OS", "Palm OS"],
+			answer: 2
+		},
+		{
+			question: "Pengesahan WTO (The World Trade Organization) telah diatur menurut undang-undang......?",
+			options: ["No. 14 Tahun 1998", "No 2 Tahun 1992", "No 27 Tahun 2012", "No 7 Tahun 1994"],
+			answer: 3
+		},
+		{
+			question: "Perangkat lunak yang dilepas seluruhnya oleh pembuatnya disebut...….? ",
+			options: ["Program percobaan", "Shareware", "Publik nomor satu", "Domain publik"],
+			answer: 3
+		},
+		{
+			question: "Seseorang tidak lagi terikat dengan syarat-syarat dalam kontak jika melakukan…..?",
+			options: ["Membuangnya begitu saja", "Mengembalikan produk tersebut", "Menjual kembali produk tersebut", "Menumpuknya di rak buku"],
+			answer: 1
+		},
+		{
+			question: "Model lisensi yang telah dikembangkan sebagai usaha kerja sama dikenal dengan nama...? ",
+			options: ["Creative common ( kreatif bersama )", "Perjanjian lisensi pengguna akhir", "Sistem peralatan gratis", "Properti industri"],
+			answer: 0
+		},
+		{
+			question: "Industri yang berbasis pada HKI berhubungan dengan kemampuan dalam ruang lingkup....?",
+			options: ["Marginal", "Sumber Daya Alam", "Semua benar", "Sumber Daya Manusia"],
+			answer: 3
+		},
+		{
+			question: "Pasal 72 (4) pada UU 19 Tahun 2002 Berkaitan dengan faktor berikut, kecuali…..?",
+			options: ["Bidang Agama", "Inventarisasi Usaha legal", "Kesusilaan", "Ketertiban Umum"],
+			answer: 1
+		}
+
+
+		];
+
+		var kembali = '../materi/materi7.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>
+<br>

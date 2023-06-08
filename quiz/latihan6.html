@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATIKA</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="background-image: url('../assets/img/background.jpg');background-size: cover;">
+	<div class="container">
+
+		<div class="project__content">
+			<h1 class="project__title">Quiz Pilihan Ganda</h1>
+		</div>
+
+		<form id="quiz-form" onsubmit="return checkAnswer()">
+			<div class="question-container">
+				<div class="question" id="question"></div>
+				<div class="options" id="options"></div>
+				<div class="feedback" id="feedback"></div>
+			</div>
+			<input type="submit" value="Selesai" id="submit">
+			<p >Pilih jawaban yang kamu anggap benar.</p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var questions = [
+		{
+			question: "Ilmu dasar yang dapat dijadikan jembatan untuk membuat komunikasi antara mesin dengan manusia…….?",
+			options: ["Penglihatan", "Robot", "NLP", "ES"],
+			answer: 2
+		},
+		{
+			question: "Sebuah sistem informasi yang memiliki intelegensia buatan (Artificial Intelegent) yang menyerupai intelegensia manusia disebut…..?",
+			options: ["Sistem Pendukung Keputusan", "Extra Sensory Project", "Program ELIZA", "Sistem Pakar"],
+			answer: 3
+		},
+		{
+			question: "Artificial Neural Network mencoba mensimulasikan proses-proses sel-sel otak yang saling berhubungan dan dibangun dari...?",
+			options: ["Rangkaian kode", "Membandingkan keluaran dari jaringan saraf", "Fitur pemfilteran email otomatis", "Meniru fungsi kognisi manusia"],
+			answer: 0
+		},
+		{
+			question: "Sebagai kelanjutan dari perkembangan AI, Bertrand Russell, dan Alfred North Whitehead menertibkan sebuah buku yang berjudul…..?",
+			options: ["Principia Bertrand Utara", "Principia Descartes", "Principia Intelegensia", "Principia Matematika"],
+			answer: 3
+		},
+		{
+			question: "Fungsi yang dibuat oleh programmer itu sendiri adalah......?",
+			options: ["Parameter fungsi", "Fungsi yang Ditentukan Programmer", "Fungsi prototipe", "Fungsi Pustaka Standar"],
+			answer: 1
+		},
+		{
+			question: "Bahasa pemrograman pertama yang diasosiasikan dengan AI adalah....….? ",
+			options: ["C++", "Rekursif", "OOP", "LISP"],
+			answer: 3
+		},
+		{
+			question: "Joel Moses mendemonstrasikan kekuatan pertimbangan simbolis untuk mengintegrasikan masalah di dalam program Macsyma, program berbasis pengetahuan yang sukses pertama kali dalam bidang.......?",
+			options: ["Bioinformatika", "Farmatika", "Matematika", "Robotika"],
+			answer: 2
+		},
+		{
+			question: "Berikut konsep dasar intelligensi buatan, kecuali.....…? ",
+			options: ["Pembelajaran mendalam", "Pembelajaran mesin", "Jaringan saraf", "Mendekripsi program"],
+			answer: 3
+		},
+		{
+			question: "Teknik pencarian yang diterapkan hanya pada elemen array yang telah terurut adalah.....? ",
+			options: ["Pencarian informasi", "Pencarian metode", "Pencarian berurutan", "Pencarian biner"],
+			answer: 3
+		},
+		{
+			question: "Variabel yang terdapat pada daftar parameter di dalam definisi fungsi disebut parameter...….? ",
+			options: ["Aktual", "Fungsi", "Perpustakaan", "Formal"],
+			answer: 3
+		}
+
+
+		];
+
+		var kembali = '../materi/materi6.html';
+	</script>
+	<script src="js.js"></script>
+
+</body>
+</html>
